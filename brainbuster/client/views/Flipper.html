@@ -1,0 +1,83 @@
+<!--
+
+<head>
+
+
+  <title>Brain Busters</title>
+
+<script type="text/javascript">
+    
+Template.gen_image.helpers({
+  next_image: function () {
+    return Session.get("currenImageId");
+  }
+});
+    
+//  
+/*
+  <img src="http://demosthenes.info/assets/images/thumbnails/homer-simpson.svg" style="width:128px;height:128px">
+  <img src="http://upload.wikimedia.org/wikipedia/tr/e/ed/Bart_Simpson.svg " style="width:128px;height:128px">
+http://bl.ocks.org/d/1007813/octocat.svg
+
+    <img src="{{next_image}}" style="width:128px;height:128px"/>
+    
+         <img src="/meteor_famous_view_logo.svg" height="75" width="90">
+
+
+*/
+</script>
+
+</head>
+-->
+
+
+<template name="views_Flipper">
+  {{#Scrollview size="[undefined,undefined]"}}
+    {{#Surface size="[undefined,true]" class="pagePad"}}
+
+        
+      
+      
+    {{/Surface}}
+
+    {{#Modifier size='[undefined, 150]' class='pagePad'}}
+      {{#Surface}}{{/Surface}} {{!- To ensure continuous scrolling --}}
+      {{>flipper}}
+    {{/Modifier}}
+
+    {{#Surface size="[undefined,true]" class="pagePad"}}
+      <br>
+
+
+
+    {{/Surface}}
+
+    {{#Surface size="[undefined,true]" class="pagePad"}}
+     
+    {{/Surface}}
+
+  {{/Scrollview}}
+</template>
+
+<template name="flipper_front">Front
+ {{>gen_image}}
+</template>
+
+<template name="flipper_back">Back
+    {{> gen_image}}
+</template>
+
+<template name="gen_image">
+    <img src="{{next_image}}" style="width:256px;height:256px"/>
+</template>
+
+<template name="flipper">
+  {{#ContainerSurface size='[300, 300]' translate='[20,0]' perspective=500}}
+    {{#Flipper}}
+      {{>Surface target="front" template="flipper_front"
+        class="red-bg" size="[300,300]" align="[.5,.5]" origin="[.5,.5]"}}
+      {{>Surface target="back" template="flipper_back"
+        class="blue-bg" size="[300,300]" align="[.5,.5]" origin="[.5,.5]"}}
+    {{/Flipper}}
+  {{/ContainerSurface}}
+</template>

@@ -1,0 +1,42 @@
+/* CSS declarations go here */
+.timbre-strip {
+	background: brown;
+	color: white;
+	font-size: 26px;
+	line-height: 45px;
+	font-family: verdana;
+	border-bottom: 2px solid white;
+	padding-left: 80px;
+}
+
+.navbar-fixed {
+	background: #795548;
+}
+
+.timbre-icon {
+	color: white;
+	font-size: 26px;
+	font-family: verdana;
+
+}
+
+.timbre-main {
+	padding: 20px;
+	background: beige;
+	color: brown;
+
+	font-family: verdana;
+}
+
+.timbre-cs {
+	border: 1px solid black;
+	background: beige;
+}
+.mainpage {
+	font-family: vendana;
+	background: beige;
+}
+
+.mainbody{
+	background: beige;
+}

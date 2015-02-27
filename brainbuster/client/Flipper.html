@@ -1,12 +1,40 @@
+<!--
+
+<head>
 
 
+  <title>Brain Busters</title>
+
+<script type="text/javascript">
+    
+Template.gen_image.helpers({
+  next_image: function () {
+    return Session.get("currenImageId");
+  }
+});
+    
+//  
+/*
+  <img src="http://demosthenes.info/assets/images/thumbnails/homer-simpson.svg" style="width:128px;height:128px">
+  <img src="http://upload.wikimedia.org/wikipedia/tr/e/ed/Bart_Simpson.svg " style="width:128px;height:128px">
+http://bl.ocks.org/d/1007813/octocat.svg
+
+    <img src="{{next_image}}" style="width:128px;height:128px"/>
+    
+         <img src="/meteor_famous_view_logo.svg" height="75" width="90">
 
 
+*/
+</script>
 
-<template name="viewsFlipper">
+</head>
+-->
+
+
+<template name="views_Flipper">
   {{#Scrollview size="[undefined,undefined]"}}
     {{#Surface size="[undefined,true]" class="pagePad"}}
-  
+
         
       
       

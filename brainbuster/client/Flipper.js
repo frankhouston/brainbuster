@@ -3,9 +3,17 @@ var currenImageId = "";
   
 Session.set("currenImageId", "http://upload.wikimedia.org/wikipedia/tr/e/ed/Bart_Simpson.svg");
     
+/*
+Router.map(function() {
+  this.route('viewsFlipper', {
+    path: 'Flipper'
+  });
+});
+*/
 
-
-
+Router.route('/Flipper', function () {
+  this.render('views_Flipper');
+});
 
 
 function flipSurface(event, fview) {
@@ -35,11 +43,7 @@ Template.gen_image.helpers({
     return Session.get("currenImageId");
   }
 });
-Router.map(function() {
-  this.route('views_Flipper', {
-    path: '/Flipper'
-  });
-});
+
 
 Template.flipper_front.famousEvents({ 'click': flipSurface });
 Template.flipper_back.famousEvents({ 'click': flipSurface });

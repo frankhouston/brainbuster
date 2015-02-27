@@ -1,0 +1,190 @@
+<head>
+  <!-- this is critical for mobile and emulation to look and work properly -->
+  <div class="mainpage">
+    <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+
+  <meta name="viewport" content="width=device-width, maximum-scale=1, user-scalable=no">
+  </div>
+</head>
+
+<body>
+<div class="mainbody">
+  
+</div>
+</body>
+
+
+
+<template name="layout">
+  {{#famousContext id="mainCtx"}}
+    {{#HeaderFooterLayout headerSize="100" footerSize="0"}}
+      {{#Surface target="header" class="beige-bg" translate="[0,0,0]"}}
+        <div id="header"></div>
+        {{>navbar}}
+      {{/Surface}}
+   
+
+      {{!-- try some other transition (or build your own):
+        slideWindowLeft, slideWindowRight
+      --}}
+      {{#RenderController target="content" transition="opacity"}}
+        {{>yield}}
+      {{/RenderController}}
+
+      
+
+    {{/HeaderFooterLayout}}
+  {{/famousContext}}
+</template>
+
+<template name="navbar">
+<div class="navbar-fixed">
+ <span class="brown"></span>
+    <nav>
+      <div class="nav-wrapper">
+        <div class="col s12">
+          <a href="\" icon="star" class="brand-logo"><h2>BrainBusters</h2></a>
+          <ul class="right hide-on-med-and-down">
+          
+            <li><a href="\">Back to Menu</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </div>
+</template>
+
+
+<template name="timbre">
+
+  {{#Scrollview}}
+     
+    {{#Surface size="[undefined,true]" class='pagePad'}}
+  <h2> <i>       Main Menu </i></h2>
+
+    {{/Surface}}
+
+    {{#Modifier size='[undefined, 300]'}}
+     {{#Surface}}{{/Surface}} {{!- To ensure continuous scrolling --}}
+      {{#ContainerSurface size="[450,undefined]" overflow="hidden" class="timbre-cs special" translate='[20,0]'}}
+        {{> timbre_menu_click}}
+        {{>Surface template="timbre_main" class="timbre-main"
+          modifier="StateModifier" translate=menuTranslate}}
+      {{/ContainerSurface}}
+    {{/Modifier}}
+
+    {{>Surface size="[undefined,true]" template="timbreSource"  class='pagePad'}}
+
+    {{#Surface size="[undefined,true]" class="pagePad"}}
+    {{/Surface}}
+
+  {{/Scrollview}}
+  
+</template>
+
+<template name="timbre_menu_click">
+  <div style="width:100%; height: 100%;" class="timbre_menu">
+  {{#SequentialLayout id="timbre-menu" size="[400,500]" translate="[0,35]"}}
+    {{>strip icon="search" text="Instructions"}}
+    {{>strip2 icon="star" text="Play Game"}}
+    {{>strip3 icon="cog" text="Settings"}}
+    {{>strip4 icon="group" text="About"}}
+  {{/SequentialLayout}}
+  </div>
+</template>
+
+<!-- Here we use a regular Meteor template to create a reusable "strip" -->
+ <template name="strip"> 
+  {{#StateModifier size="[undefined,50]"}}
+
+    {{!-- Background and text --}}
+    {{#Surface id="stripmenu" class="timbre-strip" size="[undefined,50]"
+        modifier="StateModifier" rotateZ="-10" skewZ="-10"}}
+      {{text}}
+    {{/Surface}}
+
+    {{!-- Icon (which is not rotated/skewed) --}}
+    {{#Surface class="timbre-icon" size="[50,50]" translate="[30,-2]"}}
+      <i class="fa fa-{{icon}}"></i>
+    {{/Surface}}
+
+  {{/StateModifier}}
+</template>
+
+<template name="strip2"> 
+  {{#StateModifier size="[undefined,50]"}}
+
+    {{!-- Background and text --}}
+    {{#Surface id="stripmenu2" class="timbre-strip" size="[undefined,50]"
+        modifier="StateModifier" rotateZ="-10" skewZ="-10"}}
+      {{text}}
+    {{/Surface}}
+
+    {{!-- Icon (which is not rotated/skewed) --}}
+    {{#Surface class="timbre-icon" size="[50,50]" translate="[30,-2]"}}
+      <i class="fa fa-{{icon}}"></i>
+    {{/Surface}}
+
+  {{/StateModifier}}
+</template>
+
+<template name="strip3"> 
+  {{#StateModifier size="[undefined,50]"}}
+
+    {{!-- Background and text --}}
+    {{#Surface id="stripmenu3" class="timbre-strip" size="[undefined,50]"
+        modifier="StateModifier" rotateZ="-10" skewZ="-10"}}
+      {{text}}
+    {{/Surface}}
+
+    {{!-- Icon (which is not rotated/skewed) --}}
+    {{#Surface class="timbre-icon" size="[50,50]" translate="[30,-2]"}}
+      <i class="fa fa-{{icon}}"></i>
+    {{/Surface}}
+
+  {{/StateModifier}}
+</template>
+
+<template name="strip4"> 
+  {{#StateModifier size="[undefined,50]"}}
+
+    {{!-- Background and text --}}
+    {{#Surface id="stripmenu4" class="timbre-strip" size="[undefined,50]"
+        modifier="StateModifier" rotateZ="-10" skewZ="-10"}}
+      {{text}}
+    {{/Surface}}
+
+    {{!-- Icon (which is not rotated/skewed) --}}
+    {{#Surface class="timbre-icon" size="[50,50]" translate="[30,-2]"}}
+      <i class="fa fa-{{icon}}"></i>
+    {{/Surface}}
+
+  {{/StateModifier}}
+</template>
+
+
+<template name="timbre_main">
+  <div class='timbre-main-page'>
+
+    <h3><i> BrainBusters </i></h3>
+
+    <p>BrainBusters is an app designed to help improve your...</p>
+     <ul>
+       <li>Memory</li>
+       <li>Recall</li>
+       <li>Cognitive Ability</li> 
+    </ul>  
+
+    <p>Tap on this screen to get started!</p>
+    
+  </div>
+</template>
+
+<template name="timbreSource">
+  <br />
+
+</template>
+
+
+
+

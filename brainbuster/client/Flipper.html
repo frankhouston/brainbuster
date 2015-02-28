@@ -40,7 +40,7 @@ http://bl.ocks.org/d/1007813/octocat.svg
       
     {{/Surface}}
 
-    {{#Modifier size='[undefined, 150]' class='pagePad'}}
+    {{#Modifier size='[undefined, 100]' class='pagePad'}}
     <!-- {{#Surface}}{{/Surface}} {{!- To ensure continuous scrolling }} -->
       {{>flipper}}
     {{/Modifier}}
@@ -68,16 +68,16 @@ http://bl.ocks.org/d/1007813/octocat.svg
 </template>
 
 <template name="gen_image">
-    <img src="{{next_image}}" style="width:256px;height:256px"/>
+    <img src="{{next_image}}" style="width:200px;height:200px"/>
 </template>
 
 <template name="flipper">
-  {{#ContainerSurface size='[300, 300]' origin="[0.5,0.0]" align="[0.5,0.0]" translate='[20,0]' perspective=500}}
+  {{#ContainerSurface size='[100, 100]' origin="[0.5,0.0]" align="[0.5,0.0]" translate='[20,0]' perspective=500}}
     {{#Flipper}}
       {{>Surface target="front" template="flipper_front"
-        class="red-bg" size="[300,300]" align="[.5,.5]" origin="[.5,.5]"}}
+        class="red-bg" size="[100,100]" align="[.5,0]" origin="[.5,0]"}}
       {{>Surface target="back" template="flipper_back"
-        class="blue-bg" size="[300,300]" align="[.5,.5]" origin="[.5,.5]"}}
+        class="blue-bg" size="[100,100]" align="[.5,0]" origin="[.5,0]"}}
     {{/Flipper}}
   {{/ContainerSurface}}
 </template>

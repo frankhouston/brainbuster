@@ -41,9 +41,9 @@
 <div class="navbar-fixed">
  <span class="brown"></span>
     <nav>
-      <div class="nav-wrapper">
+      <div class="nav-wrapper red darken-4">
         <div class="col s12">
-          <a href="\" icon="star" class="brand-logo"><h2>BrainBusters</h2></a>
+          <a href="\" icon="star" class="brand-logo center"><h2>BrainBusters</h2></a>
           <ul class="right hide-on-med-and-down">
           
             <li><a href="\">Back to Menu</a></li>
@@ -59,14 +59,14 @@
 
   {{#Scrollview}}
      
-    {{#Surface size="[undefined,true]" class='pagePad'}}
-  <h2> <i>       Main Menu </i></h2>
+    {{#Surface size="[undefined,true]"   class='pagePad'}}
+
 
     {{/Surface}}
 
     {{#Modifier size='[undefined, 300]'}}
-     {{#Surface}}{{/Surface}} {{!- To ensure continuous scrolling --}}
-      {{#ContainerSurface size="[450,undefined]" overflow="hidden" class="timbre-cs special" translate='[20,0]'}}
+     <!--{{#Surface}}{{/Surface}} {{!- To ensure continuous scrolling }} -->
+      {{#ContainerSurface size="[450,undefined]" origin="[0.5,0.5]" align="[0.5,0.5]" overflow="hidden" class="timbre-cs special" translate='[20,0]'}}
         {{> timbre_menu_click}}
         {{>Surface template="timbre_main" class="timbre-main"
           modifier="StateModifier" translate=menuTranslate}}

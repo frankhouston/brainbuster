@@ -10,7 +10,7 @@
 }
 
 .navbar-fixed {
-	background: #795548;
+	background: #795548;;
 }
 
 .timbre-icon {
@@ -24,13 +24,14 @@
 	padding: 20px;
 	background: beige;
 	color: brown;
-
 	font-family: verdana;
+    border-left: 1px solid white;
 }
 
 .timbre-cs {
 	border: 1px solid black;
 	background: beige;
+
 }
 .mainpage {
 	font-family: vendana;
@@ -39,4 +40,5 @@
 
 .mainbody{
 	background: beige;
+	
 }

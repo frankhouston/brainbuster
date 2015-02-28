@@ -90,11 +90,14 @@ Template.timbre.rendered = function() {
     Transform.translate(0,0),
     { duration : 1000, curve: 'easeOut' }
   );
+
+
 }
 
 // Set the transition to be used when translate= changes reactively
 Template.timbre_main.rendered = function() {
   FView.from(this).modifierTransition = { curve: 'easeOut', duration: 500 };
+
 }
 
 // On click, toggle the menuOpen state / reactive Session variable

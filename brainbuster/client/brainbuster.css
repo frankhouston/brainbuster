@@ -1,6 +1,6 @@
 /* CSS declarations go here */
 .timbre-strip {
-	background: brown;
+	background: #8d6e63;
 	color: white;
 	font-size: 26px;
 	line-height: 45px;
@@ -22,15 +22,20 @@
 
 .timbre-main {
 	padding: 20px;
-	background: beige;
-	color: brown;
+	background: #d7ccc8;
+	color: #4e342e;
 	font-family: verdana;
     border-left: 1px solid white;
 }
 
 .timbre-cs {
-	border: 1px solid black;
-	background: beige;
+	border: 3px solid #8d6e63;
+	background: #8d6e63;
+
+
+}
+.famous-root {
+	background: #bcaaa4;
 
 }
 .mainpage {

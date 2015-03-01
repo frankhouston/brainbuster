@@ -79,6 +79,8 @@ Template.timbre.helpers({
 
 
 Template.timbre.rendered = function() {
+  FView.registerView('Scrollview', famous.views.Scrollview);
+
   var fview = FView.from(this);
   var Transform = famous.core.Transform; // see shortcut help below
 

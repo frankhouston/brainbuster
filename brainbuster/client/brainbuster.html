@@ -17,7 +17,7 @@
 
 <template name="layout">
   {{#famousContext id="mainCtx"}}
-    {{#HeaderFooterLayout headerSize="100" footerSize="0"}}
+    {{#HeaderFooterLayout headerSize="75" footerSize="0"}}
       {{#Surface target="header" class="beige-bg" translate="[0,0,0]"}}
         <div id="header"></div>
         {{>navbar}}
@@ -57,16 +57,16 @@
 
 <template name="timbre">
 
-  {{#Scrollview}}
+  {{#Scrollview}} 
      
     {{#Surface size="[undefined,true]"   class='pagePad'}}
 
 
     {{/Surface}}
 
-    {{#Modifier size='[undefined, 300]'}}
-     <!--{{#Surface}}{{/Surface}} {{!- To ensure continuous scrolling }} -->
-      {{#ContainerSurface size="[450,undefined]" origin="[0.5,0.5]" align="[0.5,0.5]" overflow="hidden" class="timbre-cs special" translate='[20,0]'}}
+    {{#Modifier size='[290, 250]'}}
+     <!--{{#Surface}}{{/Surface}} {{!- To ensure continuous scrolling   WHEN YOU WANT TO CENTER IN LANDSCAPE USE ALIGN="[0.5,0.5]"}} -->
+      {{#ContainerSurface size="[290,250]" origin="[0.0,0.5]" align="[0.0,0.5]" overflow="hidden" class="timbre-cs special" translate='[15,0]'}}
         {{> timbre_menu_click}}
         {{>Surface template="timbre_main" class="timbre-main"
           modifier="StateModifier" translate=menuTranslate}}
@@ -78,8 +78,7 @@
     {{#Surface size="[undefined,true]" class="pagePad"}}
     {{/Surface}}
 
-  {{/Scrollview}}
-  
+  {{/Scrollview}} 
 </template>
 
 <template name="timbre_menu_click">

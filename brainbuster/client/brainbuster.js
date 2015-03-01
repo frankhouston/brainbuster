@@ -74,7 +74,7 @@ Session.set('menuOpen', false);
 Template.timbre.helpers({
   menuTranslate: function() {
     /*return Session.get('menuOpen') ? [300,0,20] : [0,0,20]; */
-    return Session.get('menuOpen') ? [0,240,20] : [0,0,20]; 
+    return Session.get('menuOpen') ? [240,0,20] : [0,0,20]; 
   }
 });
 

@@ -1,8 +1,14 @@
 var idxRandomImage = Math.round((2) * Math.random());
 var currenImageId = "";
-  
+var devWidth = jQuery(window).width();
+   console.log( "devWidth := " + devWidth );
+var devWidth = (devWidth-200)/2;
+   console.log( "devWidth := " + devWidth );
 Session.set("currenImageId", "http://upload.wikimedia.org/wikipedia/tr/e/ed/Bart_Simpson.svg");
-    
+Session.set("deviceWidth",  devWidth) ;   
+console.log("deviceWidthsession" + Session.get("deviceWidth"));
+
+
 /*
 Router.map(function() {
   this.route('viewsFlipper', {
@@ -44,6 +50,13 @@ Template.gen_image.helpers({
   }
 });
 
+Template.flipper.helpers({
+  device_wid: function () {
+    console.log ("helper called with device width set to " +Session.get("deviceWidth"));
+    return [ Session.get('deviceWidth'), 0 ];
+
+  }
+})
 
 Template.flipper_front.famousEvents({ 'click': flipSurface });
 Template.flipper_back.famousEvents({ 'click': flipSurface });

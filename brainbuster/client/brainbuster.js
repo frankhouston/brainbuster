@@ -73,7 +73,8 @@ Session.set('menuOpen', false);
 // Translation for "main" page, depending on whether menu is open or not
 Template.timbre.helpers({
   menuTranslate: function() {
-    return Session.get('menuOpen') ? [300,0,20] : [0,0,20];
+    /*return Session.get('menuOpen') ? [300,0,20] : [0,0,20]; */
+    return Session.get('menuOpen') ? [0,240,20] : [0,0,20]; 
   }
 });
 

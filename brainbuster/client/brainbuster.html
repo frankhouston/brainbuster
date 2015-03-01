@@ -64,9 +64,9 @@
 
     {{/Surface}}
 
-    {{#Modifier size='[290, 250]'}}
+    {{#Modifier size='[290, 290]'}}
      <!--{{#Surface}}{{/Surface}} {{!- To ensure continuous scrolling   WHEN YOU WANT TO CENTER IN LANDSCAPE USE ALIGN="[0.5,0.5]"}} -->
-      {{#ContainerSurface size="[290,250]" origin="[0.0,0.5]" align="[0.0,0.5]" overflow="hidden" class="timbre-cs special" translate='[15,0]'}}
+      {{#ContainerSurface size="[290,290]" origin="[0.0,0.5]" align="[0.0,0.5]" overflow="hidden" class="timbre-cs special" translate='[15,0]'}}
         {{> timbre_menu_click}}
         {{>Surface template="timbre_main" class="timbre-main"
           modifier="StateModifier" translate=menuTranslate}}
@@ -83,7 +83,7 @@
 
 <template name="timbre_menu_click">
   <div style="width:100%; height: 100%;" class="timbre_menu">
-  {{#SequentialLayout id="timbre-menu" size="[400,500]" translate="[0,35]"}}
+  {{#SequentialLayout id="timbre-menu" size="[260,500]" translate="[0,35]"}}
     {{>strip icon="search" text="Instructions"}}
     {{>strip2 icon="star" text="Play Game"}}
     {{>strip3 icon="cog" text="Settings"}}

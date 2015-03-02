@@ -1,0 +1,75 @@
+/* CSS declarations go here */
+.timbre-strip-submenu {
+	background: #8d6e63;
+	color: white;
+	font-size: 26px;
+	line-height: 45px;
+	font-family: verdana;
+	padding-left: 80px;
+}
+
+
+.timbre-strip-submenu-element {
+	background: #8d6e63;
+	color: white;
+	font-size: 12px;
+	line-height: 23px;
+	font-family: verdana;
+	padding-left: 40px;
+}
+
+.paper-slider::shadow #sliderKnob > #sliderKnobInner::after {
+  color: white;
+}
+
+.paper-slider::shadow #sliderBar::shadow #activeProgress {
+  background-color: #000000;
+}
+
+.settings-sub {
+	background: #8d6e63;
+	color: white;
+	font-size: 18px;
+	line-height: 22px;
+	font-family: verdana;
+	border-bottom: 2px solid white;
+	padding-left: 2px;
+}
+.navbar-fixed {
+	background: #795548;;
+}
+
+.timbre-icon {
+	color: white;
+	font-size: 26px;
+	font-family: verdana;
+
+}
+
+.timbre-main {
+	padding: 20px;
+	background: #d7ccc8;
+	color: #4e342e;
+	font-family: verdana;
+    border-left: 1px solid white;
+}
+
+.timbre-cs {
+	border: 3px solid #8d6e63;
+	background: #8d6e63;
+
+
+}
+.famous-root {
+	background: #bcaaa4;
+
+}
+.mainpage {
+	font-family: vendana;
+	background: beige;
+}
+
+.mainbody{
+	background: beige;
+	
+}

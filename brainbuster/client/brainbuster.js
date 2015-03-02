@@ -140,7 +140,7 @@ var fview2=FView.byId("stripmenu2");
   
   var target3=fview3.surface||fview3.view;
   target3.on('click', function() {
-      alert ('clicked on Settings');
+      Router.go("/Settings");
       console.log(target);
       console.log(fview);
    

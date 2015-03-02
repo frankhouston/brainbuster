@@ -1,0 +1,43 @@
+  
+  
+<template name = "views_Settings">
+{{#Modifier size="[290,290]" }}
+  {{#ContainerSurface size="[290,290]" origin="[0.0,0.5]" align="[0.0,0.5]" overflow="hidden" class="timbre-cs special" translate='[15,0]'}}
+
+
+  {{#Surface size= "[undefined,true]" align="[0.4,0.0]" origin="[0.4,0.0]" proportions="[1,1]" class="timbre-strip-submenu" }} 
+      <i class="fa fa-cog"></i>
+      <i>Settings</i> 
+  {{/Surface}}
+
+  {{#Surface size= "[undefined,true]" align="[0.4,0.22]" origin="[0.4,0.22]" proportions="[1,1]" class="timbre-strip-submenu-element" }} 
+    <div>
+      <span id="difficultyLabel"></span><span>  Back to Start </span>
+    </div>
+    <div id="slider" touch-action="pan-x"> </div>
+     <a>1</a> <paper-slider id="difficulty" min="1" max="9" value="2" snaps="true" pin="true"></paper-slider> <a>9</a>
+ 
+    <script>
+
+
+/* KRAO Added code to pull Difficulty SLider into a javascript objects */
+
+var slider = document.querySelector('#difficulty');
+  slider.addEventListener('core-change', function() {
+   document.querySelector('#difficultyLabel').textContent = slider.value;
+  Session.set("difficultySettings",  slider.value) ;   
+  //console.log("difficultySettings" + Session.get("difficultySettings"));
+
+   });
+  
+  </script>
+  
+
+  {{/Surface}}      
+
+
+  {{/ContainerSurface}}  
+{{/Modifier}}
+
+
+</template>

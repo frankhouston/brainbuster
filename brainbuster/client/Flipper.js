@@ -2,7 +2,7 @@ var idxRandomImage = Math.round((2) * Math.random());
 var currenImageId = "";
 var devWidth = jQuery(window).width();
    console.log( "devWidth := " + devWidth );
-var devWidth = (devWidth-200)/2;
+var devWidth = (devWidth-185)/2;
    console.log( "devWidth := " + devWidth );
 Session.set("currenImageId", "http://upload.wikimedia.org/wikipedia/tr/e/ed/Bart_Simpson.svg");
 Session.set("deviceWidth",  devWidth) ;   

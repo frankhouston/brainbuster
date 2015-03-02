@@ -72,12 +72,12 @@ http://bl.ocks.org/d/1007813/octocat.svg
 </template>
 
 <template name="flipper">
-  {{#ContainerSurface size='[100, 100]' origin="[0.0,0.0]" align="[0.0,0.0]" translate=device_wid skewX=sess.skewX skewY=sess.skewY perspective=500}}
+  {{#ContainerSurface size='[200, 200]' origin="[0.0,0.0]" align="[0.0,0.0]" translate=device_wid skewX=sess.skewX skewY=sess.skewY perspective=500}}
     {{#Flipper}}
       {{>Surface target="front" template="flipper_front"
-        class="red-bg" size="[100,100]" align="[0.0,0]" origin="[0.0,0]"}}
+        class="red-bg" size="[200,200]" align="[0.0,0]" origin="[0.0,0]"}}
       {{>Surface target="back" template="flipper_back"
-        class="blue-bg" size="[100,100]" align="[0.0,0]" origin="[0.0,0]"}}
+        class="blue-bg" size="[200,200]" align="[0.0,0]" origin="[0.0,0]"}}
     {{/Flipper}}
   {{/ContainerSurface}}
 </template>

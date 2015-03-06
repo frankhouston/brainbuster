@@ -18,23 +18,8 @@
 	padding-left: 40px;
 }
 
-.paper-slider::shadow #sliderKnob > #sliderKnobInner::after {
-  color: white;
-}
 
-.paper-slider::shadow #sliderBar::shadow #activeProgress {
-  background-color: #000000;
-}
 
-.settings-sub {
-	background: #8d6e63;
-	color: white;
-	font-size: 18px;
-	line-height: 22px;
-	font-family: verdana;
-	border-bottom: 2px solid white;
-	padding-left: 2px;
-}
 .navbar-fixed {
 	background: #795548;;
 }

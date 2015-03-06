@@ -1,4 +1,4 @@
-var idxRandomImage = Math.round((2) * Math.random());
+var idxRandomImage = Math.floor(Math.round((2) * Math.random()));
 var currenImageId = "";
 var devWidth = jQuery(window).width();
    console.log( "devWidth := " + devWidth );
@@ -7,6 +7,39 @@ var devWidth = (devWidth-185)/2;
 Session.set("currenImageId", "http://upload.wikimedia.org/wikipedia/tr/e/ed/Bart_Simpson.svg");
 Session.set("deviceWidth",  devWidth) ;   
 console.log("deviceWidthsession" + Session.get("deviceWidth"));
+var totalIntervals=0;
+var gameRound= new Array();
+var i=0;
+var matchCounter=0;
+
+function populateArray () {
+  
+      matchCount=0;
+ //   for (i=0; i<20; i++) {
+      while (matchCount<20) {
+      gameRound[i] = Math.floor(Math.round((2) * Math.random()));
+      console.log ( gameRound[i] +",");
+      if (i % 2==0) {
+          if (gameRound[i]==gameRound[i-2])
+            {  
+             console.log ("So far you have " +matchCount + "matches");
+             console.log ("You have a match for the value " + gameRound[i] +'at' +i );
+             matchCount++;
+            }
+       
+      }
+      console.log ("\n");
+
+      i++;
+   }
+      n=gameRound.length;
+      console.log ("You needed an array sized at " + n);
+}
+
+
+
+
+
 
 
 /*
@@ -21,8 +54,14 @@ Router.route('/Flipper', function () {
   this.render('views_Flipper');
 });
 
+populateArray();
+
+var intervalThread=Meteor.setInterval(flipSurface, 3000);
+
+
 
 function flipSurface(event, fview) {
+  
     idxRandomImage = Math.round((2) * Math.random());
     
     console.log( "idx := " + idxRandomImage );

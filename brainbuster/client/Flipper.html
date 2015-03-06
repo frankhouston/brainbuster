@@ -49,7 +49,6 @@ http://bl.ocks.org/d/1007813/octocat.svg
       <br>
 
 
-
     {{/Surface}}
 
     {{#Surface size="[undefined,true]" class="pagePad"}}
@@ -71,6 +70,13 @@ http://bl.ocks.org/d/1007813/octocat.svg
     <img src="{{next_image}}" style="width:200px;height:200px"/>
 </template>
 
+<template name="button_area">
+<paper-button>
+<core-icon icon="check-circle"></core-icon>
+ &nbsp; Found A Match
+</paper-button>
+</template>
+
 <template name="flipper">
   {{#ContainerSurface size='[200, 200]' origin="[0.0,0.0]" align="[0.0,0.0]" translate=device_wid skewX=sess.skewX skewY=sess.skewY perspective=500}}
     {{#Flipper}}
@@ -79,5 +85,8 @@ http://bl.ocks.org/d/1007813/octocat.svg
       {{>Surface target="back" template="flipper_back"
         class="blue-bg" size="[200,200]" align="[0.0,0]" origin="[0.0,0]"}}
     {{/Flipper}}
+      {{>Surface template="button_area" size= "[200,100]" align="[.5,2,0]" origin="[.5,2,0]"}}
+
+
   {{/ContainerSurface}}
 </template>

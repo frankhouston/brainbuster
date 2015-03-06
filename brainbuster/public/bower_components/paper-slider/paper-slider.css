@@ -97,8 +97,13 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   background-color: black;
 }
 
+/*
 #sliderBar::shadow #activeProgress {
   background-color: #3f51b5;
+}
+*/ 
+#sliderBar::shadow #activeProgress {
+  background-color: #000000;
 }
 
 .transiting #sliderBar::shadow #activeProgress {

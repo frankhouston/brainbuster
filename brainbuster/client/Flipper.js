@@ -11,35 +11,51 @@ var totalIntervals=0;
 var gameRound= new Array();
 var i=0;
 var matchCounter=0;
+var dbgString = "";
 
 function populateArray () {
   
+      console.log("_____brain_buster.dbg_____" );
       matchCount=0;
  //   for (i=0; i<20; i++) {
       while (matchCount<20) {
-      gameRound[i] = Math.floor(Math.round((2) * Math.random()));
-      console.log ( gameRound[i] +",");
-      if (i % 2==0) {
+      
+      
+          if( i > 0 )
+          {
+              var Chunk = Math.floor(Math.round((3) * Math.random())) ; // %50 chance num 0 or 1
+              
+              if( Chunk  <= 1  )
+              {
+              gameRound[i] = gameRound[i-1];
+                  // console.log( "{",Chunk,"}," , gameRound[i] );
+              }
+          else
+          gameRound[i] = Math.floor(Math.round((3) * Math.random()));
+          } else
+          gameRound[i] = Math.floor(Math.round((3) * Math.random()));
+          
+          dbgString = "Round["  + i + "] " + gameRound[i]; 
+
+          
           if (gameRound[i]==gameRound[i-2])
             {  
-             console.log ("So far you have " +matchCount + "matches");
-             console.log ("You have a match for the value " + gameRound[i] +'at' +i );
+             // console.log ("So far you have " +matchCount + "matches");
+             // console.log ("You have a match for the value " + gameRound[i] +'at' +i );
+             dbgString = dbgString + ", M{" +   matchCount + "}";
              matchCount++;
             }
        
-      }
-      console.log ("\n");
+      console.log ( dbgString );          
+      
+      // console.log ("\n"); 
 
       i++;
    }
       n=gameRound.length;
+      console.log("_____brain_buster.dbg_____" );
       console.log ("You needed an array sized at " + n);
 }
-
-
-
-
-
 
 
 /*
@@ -62,9 +78,9 @@ var intervalThread=Meteor.setInterval(flipSurface, 3000);
 
 function flipSurface(event, fview) {
   
-    idxRandomImage = Math.round((2) * Math.random());
+   // idxRandomImage = Math.round((2) * Math.random());
     
-    console.log( "idx := " + idxRandomImage );
+    // console.log( "idx := " + idxRandomImage );
     
     switch (idxRandomImage) {
     case 0:

@@ -66,8 +66,8 @@ Router.map(function() {
 });
 */
 
-Router.route('/Flipper', function () {
-  this.render('views_Flipper');
+Router.route('/nBack', function () {
+  this.render('views_nBack');
 });
 
 populateArray();

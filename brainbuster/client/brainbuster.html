@@ -1,12 +1,27 @@
+
 <head>
   <!-- this is critical for mobile and emulation to look and work properly -->
   <div class="mainpage">
-    <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
   
+  <script src="bower_components/webcomponentsjs/webcomponents.js"></script>
 
-  <link rel="import" href="bower_components/paper-slider/paper-slider.html">
+
+
+  
+  <link rel="import" href="bower_components/core-toolbar/core-toolbar.html">
   <link rel="import" href="bower_components/paper-button/paper-button.html">
+  <link rel="import" href="bower_components/paper-slider/paper-slider.html">
+
+
   <meta name="viewport" content="width=device-width, maximum-scale=1, user-scalable=no">
+  <style>
+ core-toolbar.dark-theme {
+      background-color: #8d6e63;
+      color: #f1f1f1;
+      fill: #8d6e63;
+    }
+</style>
+
   </div>
 </head>
 
@@ -43,23 +58,17 @@
 </template>
 
 <template name="navbar">
-<div class="navbar-fixed">
- <span class="brown"></span>
-    <nav>
-      <div class="nav-wrapper brown lighten-1">
-        <div class="col s12">
-        <!--<a href= "\" class="waves-effect waves-light btn brown lighten-2">Menu</a> -->
-         <a href="\" class="btn-floating btn-large waves-effect waves-light brown lighten-1"><i class="mdi-action-home"></i></a>
+<core-toolbar class="dark-theme" justify="center">
+ 
+  <paper-button class="colored custom">
+      <core-icon icon="home"></core-icon>
+        <a href="http://localhost:3000" ></a>  
+    </paper-button>
+    <span flex><h3><center>BrainBuster</center> </h3></span>
    
-        
-          <a icon="star" class="brand-logo center"><h4>BrainBusters</h4></a>
-          
-   
-         
-        </div>
-      </div>
-    </nav>
-  </div>
+  </core-toolbar>
+
+
 </template>
 
 

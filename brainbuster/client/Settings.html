@@ -11,27 +11,27 @@
   {{/Surface}}
 
   {{#Surface size= "[undefined,true]" align="[0.4,0.22]" origin="[0.4,0.22]" proportions="[1,1]" class="timbre-strip-submenu-element" translate='[0,0,5]'}} 
-    <div>
-      <span id="difficultyLabel"></span><span>  Back to Start </span>
+    
+      <div center horizontal layout>
+      <div>Set the n Back</div>
+      <paper-slider value="2" min="1" max="9" editable></paper-slider>
     </div>
-    <div id="slider" touch-action="pan-x"> </div>
-     <a>1</a> <paper-slider id="difficulty" min="1" max="9" value="2" snaps="true" pin="true"></paper-slider> <a>9</a>
- 
     <script>
 
 
-/* KRAO Added code to pull Difficulty SLider into a javascript objects */
+/*KRAO Added code to pull Difficulty SLider into a javascript objects */
 
-var slider = document.querySelector('#difficulty');
+ var slider = document.querySelector('#difficulty');
   slider.addEventListener('core-change', function() {
    document.querySelector('#difficultyLabel').textContent = slider.value;
   Session.set("difficultySettings",  slider.value) ;   
   //console.log("difficultySettings" + Session.get("difficultySettings"));
 
    });
-  
+ 
   </script>
   
+
 
   {{/Surface}}      
 

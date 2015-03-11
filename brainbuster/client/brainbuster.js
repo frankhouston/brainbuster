@@ -130,7 +130,7 @@ var fview2=FView.byId("stripmenu2");
   var target2=fview2.surface||fview2.view;
   target2.on('click', function() {
      // alert ('clicked on Play Game');
-      Router.go("/Flipper");
+      Router.go("/nBack");
       console.log(target);
       console.log(fview);
    

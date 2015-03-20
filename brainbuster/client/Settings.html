@@ -1,4 +1,4 @@
-  
+
   
 <template name = "views_Settings">
 {{#Modifier size="[290,290]" }}
@@ -10,12 +10,12 @@
       <i>Settings</i> 
   {{/Surface}}
 
-  {{#Surface size= "[undefined,true]" align="[0.4,0.22]" origin="[0.4,0.22]" proportions="[1,1]" class="timbre-strip-submenu-element" translate='[0,0,5]'}} 
+  {{#Surface size= "[undefined,true]" align="[0.3,0.22]" origin="[0.4,0.22]" proportions="[1,1]" class="timbre-strip-submenu-element" translate='[0,0,5]'}} 
+     <!-- <div center horizontal layout> -->
     
-      <div center horizontal layout>
-      <div>Set the n Back</div>
-      <paper-slider value="2" min="1" max="9" editable></paper-slider>
-    </div>
+      <span>Start at&nbsp;</span> <span id="difficultylabel"></span> - <span> &nbsp;Back</span>
+      <paper-slider id="difficulty" pin snaps value="2" min="1" max="9"></paper-slider>
+    <!--</div> -->
     <script>
 
 
@@ -23,7 +23,7 @@
 
  var slider = document.querySelector('#difficulty');
   slider.addEventListener('core-change', function() {
-   document.querySelector('#difficultyLabel').textContent = slider.value;
+   document.querySelector('#difficultylabel').textContent = slider.value;
   Session.set("difficultySettings",  slider.value) ;   
   //console.log("difficultySettings" + Session.get("difficultySettings"));
 

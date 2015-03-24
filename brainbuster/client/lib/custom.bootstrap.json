@@ -11,7 +11,7 @@
   "buttons":              true,
 
   "glyphicons":           true,
-  "button-groups":        false,
+  "button-groups":        true,
   "input-groups":         false,
   "navs":                 false,
   "navbar":               true,
@@ -40,10 +40,10 @@
 
   "affix":                false,
   "alert":                false,
-  "button":               false,
+  "button":               true,
   "collapse":             false,
   "scrollspy":            false,
-  "tab":                  false,
+  "tab":                  true,
   "transition":           false,
 
   "utilities":            false,
